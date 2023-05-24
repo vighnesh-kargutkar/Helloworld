@@ -2,7 +2,7 @@ version: 2
 jobs: # we now have TWO jobs, so that a workflow can coordinate them!
   one: # This is our first job.
     docker: # it uses the docker executor
-      - image: cing/ruby:2.6.8 specifically, a docker image with ruby 2.6.8
+      - image: cimg/ruby:2.6.8 specifically, a docker image with ruby 2.6.8
         auth:
           username: vighnesh11
           password: $vighnesh@123 # context / project UI env-var reference 
@@ -13,8 +13,8 @@ jobs: # we now have TWO jobs, so that a workflow can coordinate them!
       - run: sleep 25 = a command telling the job to "sleep" for 25 seconds.
   two: # This is our second job.
     docker: # it runs inside a docker image, the same as above.
-      - image: cing/ruby:3.0.2 
-         auth:
+      - image: cimg/ruby:3.0.2 
+        auth:
           username: vighnesh11
           password: $vighnesh@123 # context / project UI env-var reference 
     steps:
