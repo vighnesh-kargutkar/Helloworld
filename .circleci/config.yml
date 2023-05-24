@@ -14,9 +14,9 @@ jobs: # we now have TWO jobs, so that a workflow can coordinate them!
   two: # This is our second job.
     docker: # it runs inside a docker image, the same as above.
       -image: cing/ruby:3.0.2 
-       auth:
-         username: vighnesh11
-         password: $vighnesh@123 # context / project UI env-var reference
+        auth:
+          username: vighnesh11
+          password: $vighnesh@123 # context / project UI env-var reference 
     steps:
       - checkout
       - run: echo "A more familiar hi" # We run a similar echo command to above.
